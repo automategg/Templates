@@ -5,11 +5,13 @@
 .DESCRIPTION  
     Console output with settings to change the font color and add a timestamp.
 
-    Output with a font color is great at presenting status or unexpected values. Using Gray for requests, info or benign status, using white for system status or higher status, using green for success or completed, 
-    using yellow and red for try, catch blocks, or using blue for highlightable 
-    actions.
+    Output with a font color is great at presenting status or unexpected values. 
+    Using Gray for requests, info or benign status, using white for system 
+    status or higher status, using green for success or completed, using yellow 
+    and red for try, catch blocks, or using blue for highlightable actions.
 
-    Output with a timestamp works very well for console monitoring actions being performed by the script. Timestamping works even better when using 
+    Output with a timestamp works very well for console monitoring actions being 
+    performed by the script. Timestamping works even better when using 
     transcripts or other logging functionality to troubleshoot issues or to 
     audit tasks.
 
@@ -17,9 +19,10 @@
     File Name       :   Update-Console.psm1
     Author          :   Automate.gg
     Prerequisite    :   PowerShell V4
-    Version         :   1.0
+    Version         :   1.01
 
-    -v 1.0 (2020 11 30) : Initial version
+    -v 1.0  (2020 11 30) : Initial version
+    -v 1.01 (2020 11 30) : Updated to support 80 char line length
 
 .EXAMPLE
     Update-Console “Could you describe this ruckus, sir?”
@@ -27,18 +30,23 @@
     Console output is default font color.
 
 .EXAMPLE
-    Update-Console -colorTemp:Yellow "My uncle was microwaving our socks and the dog threw up on the couch for an hour."
+    Update-Console -colorTemp:Yellow "My uncle was microwaving our socks and the 
+        dog threw up on the couch for an hour."
 
     Console output is Yellow font color.
 
-    You do not need to know the available font colors, you can TAB cycle through them.
+    You do not need to know the available font colors, you can TAB cycle through 
+        them.
 
 .EXAMPLE
-    Update-Console -timeStamp -colorTemp:DarkGreen “You call that pitching? This is baseball! Not tennis!"
+    Update-Console -timeStamp -colorTemp:DarkGreen “You call that pitching? This 
+        is baseball! Not tennis!"
 
-    Console output starts with the current timestamp and the entire line is Dark Green font color.
+    Console output starts with the current timestamp and the entire line is Dark 
+        Green font color.
 
-    You do not need to know the available font colors, you can TAB cycle through them.
+    You do not need to know the available font colors, you can TAB cycle through 
+        them.
 #>
     
 function Update-Console {
