@@ -16,3 +16,12 @@ try, catch blocks, or using blue for highlightable actions.
 Output with a timestamp works very well for console monitoring actions being 
 performed by the script. Timestamping works even better when using transcripts 
 or other logging functionality to troubleshoot issues or to audit tasks.
+
+![](https://i.ibb.co/HFjx43T/update-console-example-01.png)
+
+![](https://i.ibb.co/YfBsgML/update-console-example-02.png)
+
+![](https://i.ibb.co/q1fMB2s/update-console-example-03.png)
+
+
+
