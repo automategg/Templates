@@ -19,10 +19,11 @@
     File Name       :   Update-Console.psm1
     Author          :   Automate.gg
     Prerequisite    :   PowerShell V4
-    Version         :   1.01
+    Version         :   1.1
 
     -v 1.0  (2020 11 30) : Initial version
     -v 1.01 (2020 11 30) : Updated to support 80 char line length
+    -v 1.1  (2020 12 01) : Included log parameter
 
 .EXAMPLE
     Update-Console “Could you describe this ruckus, sir?”
@@ -47,6 +48,13 @@
 
     You do not need to know the available font colors, you can TAB cycle through 
         them.
+
+.EXAMPLE
+    Update-Console -timeStamp -colorTemp:Red -log "Greetings, programs!"
+
+    Console output starts with the current timestamp and the entire line is Red 
+        font color. Output statement is logged for auditing or troubleshooting
+    
 #>
     
 function Update-Console {
@@ -59,6 +67,8 @@ function Update-Console {
             $consoleOutput,
         [Parameter(Mandatory=$false)]
             [switch]$timeStamp,
+        [Parameter(Mandatory=$false)]
+            [switch]$log,
         [Parameter(Mandatory=$false)]
             [ValidateSet('Black',
                 'DarkBlue',
@@ -92,6 +102,11 @@ function Update-Console {
     }
     else {
         Write-Host ($consoleOutput)
+    }
+
+    If ($log) {
+        # Log statement
+        #Update-Log
     }
 
     $host.ui.RawUI.ForegroundColor = $colorOriginal    
