@@ -1,7 +1,7 @@
 # Templates
 Templates and examples for simple functions and scripts. These functions and 
 modules are building blocks to piece together more complex code and scripts. I 
-like using them as modules to simplify their use in everday scripting and to
+like using them as modules to simplify their use in everyday scripting and to
 simplify more complex scripts. Sometimes, the modules are pasted as functions 
 for complex scripts for portability or readability.
 
@@ -23,5 +23,10 @@ or other logging functionality to troubleshoot issues or to audit tasks.
 
 ![](https://i.ibb.co/q1fMB2s/update-console-example-03.png)
 
+![](https://i.ibb.co/DgM1ggm/update-console-example-04.png)
 
 
+
+# Show-HeaderTemplate
+
+Example PowerShell Header with descriptions for each section and example for parameters.
